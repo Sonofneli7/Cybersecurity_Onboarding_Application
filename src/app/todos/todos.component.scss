@@ -1,0 +1,120 @@
+// Wrapper for the todos
+.todos-wrapper {
+  height: 100%;
+  overflow-y: auto;
+  background: url('/assets/background.jpg') no-repeat center center fixed; // Adds background image
+  background-size: cover;
+}
+
+// Container for todo items
+.todo-container {
+  display: flex;
+  flex-direction: column; // Stacks items vertically
+  align-items: center; // Centers content horizontally
+  justify-content: flex-start; // Aligns items to the top
+  padding: 20px; // Adds spacing inside the container
+  height: 100%;
+}
+
+// Title for the todo section
+.todo-title {
+  font-size: 36px; // Font size for smaller screens
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.7); // Darker semi-transparent background
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: inline-block; // Ensures the box fits the content
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Adds subtle shadow for depth
+}
+
+.todo-sub_title{
+  font-size: 14px; 
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.7); 
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: inline-block; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Adds subtle shadow for depth
+}
+
+// Styling for the empty todos message
+.empty-todos {
+  text-align: center;
+  color: #888;
+  font-size: 18px;
+  margin-top: 20px;
+  font-style: italic;
+}
+
+// Styling for the add button
+.add-btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: #007bff;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px; // Adds spacing above the button
+}
+
+.add-btn:hover {
+  background-color: #0056b3;
+}
+
+// Styling for the icon inside the add button
+.add-btn i {
+  margin-right: 8px;
+}
+
+// Styling for individual todo items
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; // Spacing between todo items
+  font-size: 18px;
+  color: #333;
+  background-color: rgba(0, 0, 0, 0.6); // Semi-transparent background for items
+  padding: 10px;
+  border-radius: 8px; // Rounds the corners
+}
+
+.completed {
+  text-decoration: line-through; // Strikes through completed items
+  opacity: 0.6; // Fades completed items
+}
+
+input[type="checkbox"] {
+  margin-right: 10px; // Adds spacing between checkbox and text
+}
+
+// Responsive design for smaller screens
+@media (max-width: 600px) {
+  .todo-title {
+    font-size: 28px; // Smaller font size for smaller screens
+    margin-bottom: 15px;
+  }
+
+  .add-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .empty-todos {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,54 @@
+.notes-wrapper{
+    height: 100%;
+    overflow-y: auto;
+}
+
+.notes-container {
+    display: flex;
+    justify-content: center; /* Centers the box horizontally */
+    align-items: center; /* Optional: centers content vertically */
+    flex-direction: column; /* Stacks content vertically (if needed) */
+    height: 100%; /* Adjust to fit your layout */
+    text-align: left;
+  }
+
+  .notes-title {
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 40px;
+    padding: 10px 20px; /* Adds spacing inside the box */
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+    border-radius: 8px; /* Rounds the corners of the box */
+    display: inline-block; /* Ensures the box fits the title content */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for depth */
+  }
+// styling icon for add button
+// Styling for the add button
+.add-btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: #007bff;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.add-btn:hover {
+  background-color: #0056b3;
+}
+
+// Styling for icon inside the add button
+.add-btn i {
+  margin-right: 8px;
+}
+
+app-note-card{
+    display: block;
+    margin-bottom: 15px;
+}

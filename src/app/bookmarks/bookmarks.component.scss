@@ -1,0 +1,85 @@
+.bookmarks-wrapper {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.bookmarks-container {
+  display: flex;
+  justify-content: center; /* Centers the box horizontally */
+  align-items: center; /* Optional: centers content vertically */
+  flex-direction: column; /* Stacks content vertically (if needed) */
+  height: 100%; /* Adjust to fit your layout */
+}
+
+.bookmark-title {
+  text-align: center;
+  font-size: 48px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 40px;
+  padding: 10px 20px; /* Adds spacing inside the box */
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+  border-radius: 8px; /* Rounds the corners of the box */
+  display: inline-block; /* Ensures the box fits the title content */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for depth */
+}
+
+.bookmark-tiles-container {
+  display: flex; /* making bookmark tiles horizontal to each other */
+  gap: 20px; /* add spacing between */
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btns-container {
+  display: flex;
+  justify-content: center; /* Align buttons horizontally */
+  gap: 15px; /* Adjust spacing between buttons */
+}
+
+// Styling for the add button
+.add-btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: #007bff;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.add-btn:hover {
+  background-color: #0056b3;
+}
+
+// Styling for icon inside the add button
+.add-btn i {
+  margin-right: 8px;
+}
+
+// Styling for the manage button
+.manage-btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: #007bff;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.manage-btn:hover {
+  background-color: #0056b3; /* Darker green when hovered */
+}
+
+// Styling for icon inside the manage button
+.manage-btn i {
+  margin-right: 8px;
+  opacity: 0.9;
+}

@@ -1,0 +1,25 @@
+<div class="todos-wrapper">
+  <div class="container">
+    <div class="todo-container">
+      <h1 class="todo-title">New On-Boarding Checklist</h1>
+      <h2 class="todo-sub_title">Created by Nelson Morales</h2>
+    </div>
+
+    <ul>
+      <li *ngFor="let todo of todos">
+        <app-todo-item
+          [todo]="todo"
+          (editClick)="handleEdit(todo)"
+          (deleteClick)="handleDelete(todo.id)"
+          (toggleCompletion)="handleToggleCompletion(todo.id)">
+        </app-todo-item>
+      </li>
+    </ul>
+
+    <div class="btns-container btns-centered">
+      <a routerLink="add" class="btn add-btn">
+        <i class="material-symbols-outlined">add</i> Add Todos
+      </a>
+    </div>
+  </div>
+</div>

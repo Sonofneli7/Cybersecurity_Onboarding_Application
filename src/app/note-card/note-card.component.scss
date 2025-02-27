@@ -1,0 +1,39 @@
+.note-card {
+    background-color: #f9f9f9; 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    padding: 5px; 
+    margin-bottom: 16px; 
+    font-family: 'Arial', sans-serif; 
+  
+    ul {
+      padding-left: 20px; 
+      margin: 0;
+  
+      li {
+        list-style-type: disc; 
+        margin-bottom: 8px; 
+        line-height: 1.6; 
+        font-size: 1rem; 
+        color: #333; 
+      }
+    }
+  
+  
+    &:hover {
+      background-color: rgba(white, 0.774); 
+      backdrop-filter: blur(2px);
+    }
+  }
+  
+  .note-card-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+  }
+  
+  .note-card-content {
+    margin-top: 7px; 
+    text-align: left;
+  }
+  

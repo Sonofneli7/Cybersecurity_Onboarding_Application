@@ -1,0 +1,46 @@
+<div class="add-bookmark-wrapper container has-blurred-white-bg">
+    <h2 class="is-bold">Add Bookmark Here</h2>
+    <form #form="ngForm" ngNativeValidate (ngSubmit)="onFormSubmit(form)" novalidate>
+      <div class="form-field">
+        <label class="form-label">NAME</label>
+        <input
+          class="textbox"
+          ngModel
+          #nameField="ngModel"
+          name="name"
+          type="text"
+          placeholder="e.g. Disney Tech & Digital"
+          required
+          minlength="3"
+        />
+        <div *ngIf="(showValidationErrors || nameField.touched) && nameField.errors" class="error-messages">
+          <span *ngIf="nameField.errors['required']">Name is required...</span>
+          <span *ngIf="nameField.errors['minlength']">Name must be at least 3 characters.</span>
+        </div>
+      </div>
+  
+      <div class="form-field">
+        <label class="form-label">URL</label>
+        <input
+          class="textbox"
+          ngModel
+          #urlField="ngModel"
+          name="url"
+          type="url"
+          placeholder="e.g. https://wdprhubsites.disney.com"
+          required
+          minlength="3"
+        />
+        <div *ngIf="(showValidationErrors || urlField.touched) && urlField.errors" class="error-messages">
+          <span *ngIf="urlField.errors['required']">URL is required...</span>
+          <span *ngIf="urlField.errors['pattern']">URL must be valid.</span>
+        </div>
+      </div>
+  
+      <div class="btns-container">
+        <a routerLink="/bookmarks" class="btn">Cancel</a>
+        <button type="submit" class="btn align-end">Create Bookmark</button>
+      </div>
+    </form>
+  </div>
+  

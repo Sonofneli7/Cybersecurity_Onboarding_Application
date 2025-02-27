@@ -1,0 +1,17 @@
+<!-- app-note-card.component.html -->
+<div class="note-card">
+  <div class="note-card-title">{{ note?.title }}</div>
+  <div class="note-card-content" *ngIf="note && note.content">
+  <!-- Loop over each note's content -->
+<ul>
+  <li *ngFor="let line of note.content">
+    <!-- Split each line by newline and display it -->
+    <div *ngFor="let subLine of line.split('\n')">
+      {{ subLine }}
+    </div>
+  </li>
+</ul>
+  </div>
+</div>
+
+  

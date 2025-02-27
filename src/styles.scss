@@ -1,0 +1,151 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+/* Import in your CSS */
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+
+/* Font Family used */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+// https://fonts.google.com/icons
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
+
+
+
+
+html{
+   font-family: 'Inter', sans-serif;
+   color: #222;
+}
+
+html, body{
+    height: 100%;
+}
+
+h1{
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 40px;
+
+    margin-bottom: 25px;
+}
+
+.is-bold {
+    font-weight: bold;
+    letter-spacing: -2px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    max-width: 850px;
+    //center the container
+    margin: auto;
+
+}
+
+// btn for Add in notes section
+.btn{
+    align-items: center;
+    display: inline-flex;
+    padding: 12px 22px;
+    background: rgba($color: #000000, $alpha: 0.7);
+
+    font-family: inherit;
+
+    text-decoration: none;
+
+    color: white;
+
+    font-size: 18px;
+    font-weight: 600;
+    border: none;   // makes 'create note' button same size as cancel button
+    border-radius: 6px;
+
+
+    cursor: pointer;
+
+    // adding hover styles
+    &:hover{
+        background: rgba($color: #000000, $alpha: 0.78);
+        backdrop-filter: blur(2px);
+    }
+
+    &:active{
+
+        background: rgba($color: #000000, $alpha: 0.85);
+    }
+}
+
+.delete-btn {
+    background-color: #dc3545; /* Red background for delete */
+  }
+
+.btns-container{
+    display: flex;
+    margin-top: 20px;
+
+    &.btns-centered{
+        justify-content: center;
+    }
+
+    .align-end{
+        margin-left: auto;  // separates buttons from each other
+    }
+}
+
+.has-blurred-white-bg{
+    background: rgba($color: white, $alpha: 0.85);
+    backdrop-filter: blur(20px);
+}
+
+.form-field{
+    margin-bottom: 20px;
+
+    label.form-label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 600;
+        color: rgba($color: black, $alpha: 0.8);
+
+    }
+}
+
+.textbox,
+.textarea {
+
+    display: block; // bring buttons closer to text area
+
+    font-size: 18px;
+    font-family: inherit;
+    padding: 8px 10px;
+
+    width: 100%;
+    border: 2px solid rgba(0, 0, 0, 0.3);  
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.9);  
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.95);  
+        border-color: rgba(black, 0.42);  
+    }
+
+    &:focus {
+        background: white;
+        outline: none;
+     
+    }
+
+    &:hover,
+    &:focus{
+        border-color: rgba(black, 0.42);  
+    }
+}
+
+.textarea{
+    resize: vertical; 
+    min-height: 100px;
+}

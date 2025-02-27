@@ -1,0 +1,32 @@
+<!-- Notes Template -->
+<div class="notes-wrapper">
+  <div class="container">
+    <div class="notes-container">
+      <h1 class="notes-title">Notes</h1>
+    </div>
+
+    <!-- Notes List -->
+    <div class="notes-list">
+      <!-- Loop through notes, passing each note to app-note-card -->
+      <ul>
+        <li *ngFor="let note of notes">
+          <a [routerLink]="['/notes', note.id]">
+            <app-note-card
+              [note]="note"
+              (editClick)="handleEdit(note)"
+              (deleteClick)="handleDelete(note.id)">
+            </app-note-card>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Add Note Button -->
+    <div class="btns-container btns-centered">
+      <a routerLink="add" class="btn add-btn">
+        <i class="material-symbols-outlined">add</i> Add Note
+      </a>
+    </div>
+  </div>
+</div>
+

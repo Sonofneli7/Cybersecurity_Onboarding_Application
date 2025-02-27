@@ -1,0 +1,17 @@
+<a [href]="bookmark.url" class="bookmark-tile" target="_blank" rel="noopener noreferrer">
+  <div class="tile-icon" [ngClass]="{ fallback: faviconError }">
+    <!-- Display favicon image if no error -->
+    <img 
+      *ngIf="!faviconError" 
+      [src]="tileIconSrc" 
+      alt="Bookmark Icon" 
+      (error)="onFaviconError()" 
+    />
+
+    <!-- Fallback to the first letter when favicon fails -->
+    <div *ngIf="faviconError" class="fallback-text">
+      {{ firstLetter.toUpperCase() }}
+    </div>
+  </div>
+  <p class="tile-text">{{ name }}</p>
+</a>

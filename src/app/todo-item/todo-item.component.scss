@@ -1,0 +1,90 @@
+.todo-item {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 2px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  
+  &:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  .todo-item-actions {
+    display: flex;
+    gap: 10px;
+    visibility: hidden; /* Hide by default */
+    opacity: 0; /* Make it invisible */
+    transition: visibility 0s 0.2s, opacity 0.2s ease-in-out; /* Delay visibility change */
+  }
+
+  &:hover .todo-item-actions {
+    visibility: visible; /* Show on hover */
+    opacity: 1; /* Make it fully visible */
+    transition: opacity 0.2s ease-in-out;
+  }
+}
+
+.todo-text {
+  color: #333;
+  font-size: 1.2rem;
+  font-family: 'Arial', sans-serif;
+  margin-left: 12px;
+  margin-right: auto;
+  line-height: 1.6;
+  flex: 1; /* Ensure the text takes up available space */
+  text-align: left;
+  word-wrap: break-word; /* Ensures text breaks when it reaches the container’s boundary */
+}
+
+.check-box {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 12px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+
+  i {
+    font-size: 16px;
+    opacity: 0;
+  }
+
+  &:hover {
+    border-color: #999;
+  }
+}
+
+.todo-item.completed .check-box {
+  background-color: rgb(19, 218, 9);
+  border-color: transparent;
+
+  i {
+    opacity: 1;
+  }
+}
+
+.todo-item.completed .todo-text {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.todo-item-actions .todo-item-action-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+
+  &:hover {
+    color: #007BFF; /* Highlight color on hover */
+  }
+}

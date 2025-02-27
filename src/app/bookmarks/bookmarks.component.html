@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="bookmarks-container">
+    <h1 class="bookmark-title">Bookmarks</h1>
+  </div>
+
+  <!-- Drag-and-drop list container -->
+  <div
+    cdkDropList
+    (cdkDropListDropped)="onDrop($event)" 
+    class="bookmark-tiles-container"
+  >
+    <!-- Loop through each bookmark and make it draggable -->
+    <app-bookmark-tile
+      *ngFor="let bookmark of bookmarks"
+      [bookmark]="bookmark"
+      cdkDrag
+    ></app-bookmark-tile>
+  </div>
+
+  <!-- Add Bookmark and Manage buttons -->
+  <div class="btns-container btns-centered">
+    <a routerLink="add" class="btn add-btn">
+      <i class="material-symbols-outlined">add</i> Add Bookmark
+    </a>
+    <a routerLink="manage" class="btn manage-btn">
+      <i class="material-symbols-outlined">settings</i> Manage Bookmarks
+    </a>
+  </div>
+</div>
